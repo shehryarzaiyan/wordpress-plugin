@@ -31,12 +31,16 @@ class WC_Spotii_Gateway_Shop_Now_Pay_Later extends WC_Payment_Gateway{
         $instalment = wc_price($total / 4);
         if(get_locale() == 'ar'){
             $timesch = 'جدول المدفوعات';
-            $time = ['اليوم', 'الدفعة الثانية', 'الدفعة الثالثة', 'الدفعة الرابعة'];  
+            $time = [ 'اليوم','اليوم الثلاثين']; 
+            $total_amount_displayed_today = get_woocommerce_currency_symbol();
+			$total_amount_displayed = wc_price($total);
             $total = 'المجموع: '.wc_price($total) ;
             $align = 'right';
         }else{
             $timesch = 'Payment Schedule';
-            $time = ['Today', 'Second payment', 'Third payment', 'Fourth payment'];
+            $time = ['Today', '30th Day'];
+            $total_amount_displayed_today = get_woocommerce_currency_symbol();
+			$total_amount_displayed = wc_price($total);
             $total = 'Total : ' . wc_price($total) ;
             $align = 'left';
         }
@@ -47,20 +51,12 @@ class WC_Spotii_Gateway_Shop_Now_Pay_Later extends WC_Payment_Gateway{
                     <div class="spotii-bar"></div>
                     <ul class="spotii-steps">
                             <span class="spotii-highlight">
-                            <span class="spotii-installment-amount">' . $instalment . '</span>
+                            <span class="spotii-installment-amount"> 0' . $total_amount_displayed_today . '</span>
                             <span class="spotii-time-period">' . $time[0] . '</span>
                             </span>
                             <span class="spotii-step">
-                            <span class="spotii-installment-amount">' . $instalment . '</span>
+                            <span class="spotii-installment-amount">' . $total_amount_displayed . '</span>
                             <span class="spotii-time-period">' . $time[1] . '</span>
-                            </span>
-                            <span class="spotii-step">
-                            <span class="spotii-installment-amount">' . $instalment . '</span>
-                            <span class="spotii-time-period">' . $time[2] . '</span>
-                            </span>
-                            <span class="spotii-step">
-                            <span class="spotii-installment-amount">' . $instalment . '</span>
-                            <span class="spotii-time-period">' . $time[3] . '</span>
                             </span>
                     </ul>
                 </div>
