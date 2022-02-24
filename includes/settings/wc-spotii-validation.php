@@ -16,6 +16,12 @@ function check_amount($spotii_amount, $spotii_currency, $merchant_amount, $merch
                     case "SAR":
                         $merchant_amount = $merchant_amount * 0.9604;
                         break;
+                    case "OMR":
+                        $merchant_amount = $merchant_amount * 9.55;
+                        break;
+                    case "BHD":
+                        $merchant_amount = $merchant_amount * 9.75;
+                        break;
                 }
             }
             if (abs(($spotii_amount - $merchant_amount)) < 5) {
@@ -38,7 +44,7 @@ function check_amount($spotii_amount, $spotii_currency, $merchant_amount, $merch
 */
 function validate_curr($curr){
 
-    if ($curr == "AED" || $curr == "SAR" || $curr == "USD") {
+    if ($curr == "AED" || $curr == "SAR" || $curr == "USD"|| $curr == "BHD" || $curr == "OMR") {
         return true;
     } else {
         return false;

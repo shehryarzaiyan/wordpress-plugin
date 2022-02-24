@@ -8,9 +8,6 @@ function processPayment($order_id, $th, $type = null, $addon){
     $order = new WC_Order($order_id);
     $currency = $order->get_currency();
     $total=$order->get_total();
-    if($currency == "USD" ){
-        $total = $total * 3.6730;
-    }
     $min = $th->order_min;
     // Spotii minimum limit 
     if ($type != "Pay Now" && (int)$total < $min) {
