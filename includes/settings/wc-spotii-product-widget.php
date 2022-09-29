@@ -18,12 +18,12 @@ function add_product_widget(){
 	 echo '<div id="spotii-product-widget">'.
 	'</div><div id="spotii-product-widget-price" style="display:none;">'. $instal . '</div>'.
 	'<script>window.spotiiConfig = {targetXPath: [\'#spotii-product-widget-price\'], renderToPath: [\''.$render.'\'],currency: "'.$currency.'",theme:"'.$theme.'",howItWorksURL : "'.$url.'",minNote:"'.$custom_note_ar.'"};</script>'.
-	'<script>(function(w,d,s) {var f=d.getElementsByTagName(s)[0];var a=d.createElement(\'script\');a.async=true;a.src=\'https://widget.spotii.me/v1/javascript/price-widget-ar-elec\';f.parentNode.insertBefore(a,f);}(window, document, \'script\'));</script> '; 
+	'<script>(function(w,d,s) {var f=d.getElementsByTagName(s)[0];var a=d.createElement(\'script\');a.async=true;a.src=\'https://widget.spotii.me/v1/javascript/spotii-zip-widget-ar\';f.parentNode.insertBefore(a,f);}(window, document, \'script\'));</script> '; 
 }else {
 	echo '<div id="spotii-product-widget">'.
 	'</div><div id="spotii-product-widget-price" style="display:none;">'. $instal . '</div>'.
 	'<script>window.spotiiConfig = {targetXPath: [\'#spotii-product-widget-price\'], renderToPath: [\''.$render.'\'],currency: "'.$currency.'",templateLine:"'.$widget_text.'",theme:"'.$theme.'",minNote:"'.$custom_note_en.'",howItWorksURL : "'.$url.'",};</script>'.
-	' <script>(function(w,d,s) {var f=d.getElementsByTagName(s)[0];var a=d.createElement(\'script\');a.async=true;a.src=\'https://widget.spotii.me/v1/javascript/price-widget-elec.js\';f.parentNode.insertBefore(a,f);}(window, document, \'script\'));</script> ';
+	' <script>(function(w,d,s) {var f=d.getElementsByTagName(s)[0];var a=d.createElement(\'script\');a.async=true;a.src=\'https://widget.spotii.me/v1/javascript/spotii-zip-widget\';f.parentNode.insertBefore(a,f);}(window, document, \'script\'));</script> ';
 			}
   echo'
 		   <script>
