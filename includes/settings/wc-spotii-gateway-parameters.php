@@ -5,7 +5,7 @@
 function gatewayParameters($th, $type = null){
 
     $th->id = $type == "Pay Now" ? "spotii_pay_now" : 'spotii_shop_now_pay_later';
-    $type == "Shop Now Pay Later" ? $th->icon = 'https://spotii.me/img/logo.svg' : '';
+    $type == "Shop Now Pay Later" ? $th->icon = 'https://widget.spotii.me/v1/img/g10.png' : '';
     $th->method_title = 'Spotii';
     $th->method_description =  $type == "Pay Now" ? "Pay instant payment with spotii." : 'Have your customers pay over time for their purchases. No hidden fees, no interest.';
 
