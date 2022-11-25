@@ -27,7 +27,7 @@ class WC_Spotii_Gateway_Shop_Now_Pay_Later extends WC_Payment_Gateway{
     */
     public function payment_fields(){
 
-        $total = WC()->cart->total;
+        $total = WC()->cart->total;     
         $instalment_1 = wc_price($total * .40);
         $instalment = wc_price($total * .20);
         if(get_locale() == 'ar'){
